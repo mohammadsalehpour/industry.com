@@ -1,48 +1,80 @@
 # Wordpress - ignore core, configuration, examples, uploads and logs.
 # https://github.com/github/gitignore/blob/main/WordPress.gitignore
+# -------------------
+# 🧠 سیستم عامل / ابزار
+# -------------------
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
 
-# Core
-#
-# Note: if you want to stage/commit WP core files
-# you can delete this whole section/until Configuration.
-/wp-admin/
-/wp-content/index.php
-/wp-content/languages
-/wp-content/plugins/index.php
-/wp-content/themes/index.php
-/wp-includes/
-/index.php
-/license.txt
-/readme.html
-/wp-*.php
-/xmlrpc.php
+# -------------------
+# 💻 محیط توسعه
+# -------------------
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
 
-# Configuration
+# -------------------
+# 🛠 PHP & Composer
+# -------------------
+vendor/
+composer.lock
+
+# -------------------
+# 🔐 فایل‌های حساس وردپرس
+# -------------------
 wp-config.php
+.htaccess
+web.config
 
-# Example themes
-/wp-content/themes/twenty*/
-
-# Example plugin
-/wp-content/plugins/hello.php
-
-# Uploads
-/wp-content/uploads/
-
-# Log files
+# -------------------
+# 🧪 تست و کش‌ها
+# -------------------
 *.log
+*.sql
+*.zip
+*.tar.gz
+*.gz
+*.bak
+*.tmp
+*.swp
+*.orig
 
-# htaccess
-/.htaccess
+# -------------------
+# 🖼 پوشه‌های پویا وردپرس
+# -------------------
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/backup-*/ 
+wp-content/backups/
+wp-content/mu-plugins/
 
-# All plugins
-#
-# Note: If you wish to whitelist plugins,
-# uncomment the next line
-#/wp-content/plugins
+# -------------------
+# 🔌 پلاگین و قالب‌ها (در صورتی که فقط بعضی‌ها مهم هستن)
+# اگر نمی‌خوای همه پلاگین‌ها رو track کنی، اینجا تنظیم کن:
+#wp-content/plugins/*
+#!wp-content/plugins/my-plugin/
 
-# All themes
-#
-# Note: If you wish to whitelist themes,
-# uncomment the next line
-#/wp-content/themes
+#wp-content/themes/*
+#!wp-content/themes/my-theme/
+
+# -------------------
+# ⚙️ Env & Config
+# -------------------
+.env
+.env.*
+.env.local
+.env.development
+.env.production
+.env.testing
+
+# -------------------
+# 💡 مخفی‌سازی فایل‌های شخصی توسعه‌دهنده
+# -------------------
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
